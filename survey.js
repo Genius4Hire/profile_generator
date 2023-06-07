@@ -4,10 +4,6 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-// const r2 = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
 
 rl.question('1. What elements of your life make you feel the most inspired? ', (answer1) => {
   // 1. What elements of your life make you feel the most inspired?
@@ -30,19 +26,21 @@ rl.question('1. What elements of your life make you feel the most inspired? ', (
             rl.question('7. What do you enjoy most about living where you do? ', (answer7) => {
               // 7. What do you enjoy most about living where you do?
               console.log(`Thank you for your valuable feedback: ${answer7}`);
+              console.log("Here is your profile description:");
+              console.log(
+                `I feel the most inspired by ${answer1}.  ` + 
+                `The values that I live by are ${answer2}.  ` +
+                `${answer3} has most significantly impacted my professional journey so far.  ` +
+                `I have enjoy the challenge of ${answer4}, even though it is outside comfort zone.  ` +
+                `${answer5} is my proudest accomplishment, ` +
+                `however, ${answer6} gives me a sense of purpose and fulfillment.  ` +
+                `I love where I live, because I get to do a lot of ${answer7}".`
+              );
               rl.close();
             });
           });
         });
       });
     });
-  });
-
-                  
+  });               
 });
-
-
-
-
-
-
